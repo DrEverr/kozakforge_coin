@@ -12,7 +12,7 @@ fun init(witness: KOZAKFORGE_COIN, ctx: &mut TxContext) {
         b"KFC".to_string(),
         b"KozakForge Coin".to_string(),
         b"Coin for real Kozaks".to_string(),
-        b"".to_string(),
+        b"https://raw.githubusercontent.com/DrEverr/kozakforge_coin/refs/heads/main/assets/KozakForgeCoin.png".to_string(),
         ctx
     );
 
