@@ -1,7 +1,8 @@
 module kozakforge_coin::kozakforge_coin;
 
 use sui::coin::{Self, TreasuryCap};
-use sui::coin_registry;
+use sui::coin_registry::{Self, Currency};
+use sui::transfer::Receiving;
 
 public struct KOZAKFORGE_COIN has drop {}
 
@@ -27,3 +28,6 @@ public fun mint_to_self(cap: &mut TreasuryCap<KOZAKFORGE_COIN>, amount: u64, ctx
     coin::mint_and_transfer(cap, amount, tx_context::sender(ctx), ctx);
 }
 
+public fun finalize_registration(registry: &mut coin_registry::CoinRegistry, currency: Receiving<Currency<KOZAKFORGE_COIN>>, ctx: &mut TxContext) {
+    coin_registry::finalize_registration(registry, currency, ctx);
+}

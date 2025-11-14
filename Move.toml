@@ -1,6 +1,6 @@
 [package]
 name = "kozakforge_coin"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2024.beta"
 license = "MIT"
 authors = ["Marcin Sokołowski (https://github.com/DrEverr)"]
